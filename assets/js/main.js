@@ -17,19 +17,17 @@ const  app  =  Vue 。createApp （{
       * q3： 'おおお'、
       * /
       correctAnswer：{
-        ステージ1：{
-          q1：'あああ' 、
+        stage1：{
+          q1：'サンダー' 、
+          q2:'ファイヤー'、
+          q3:'ワォーター'、
         } 、
-        ステージ2：{
-          q1：'いいい' 、
-          // q2： 'えええ'、
-          // q3： 'おおお'
+        stage2：{
+          q1：'すて2' 、
         } 、
-        ステージ3：{
-          q1：'ううう' 、
-          // q2： 'かかか'、
-          // q3： 'ききき'、
-        }
+        stage3：{
+          q1：'すて3' 、
+        }　　、
       } 、
 
       / *ここの問題が正解かか
@@ -37,24 +35,22 @@ const  app  =  Vue 。createApp （{
       * /
       答え：{
         ステージ1：[
-          false 、
+          false、 1-1
+          false、　　1-2
+          false、　　1-3
         ] 、
         ステージ2：[
-          false 、 // 2-1
-          // false、// 2-2
-          // false、// 2-3
+          false 、
         ] 、
         ステージ3：[
-          false 、 // 3-1
-          // false、// 3-2
-          // false、// 3-3
+          false 、
         ]
       } 、
 
       / *ステージの問題があり正解かか* /
       クリア：{
         stage1：false 、
-        ステージ2：false 、
+        stage2：false 、
         stage3：false 、
       } 、
 
@@ -63,7 +59,7 @@ const  app  =  Vue 。createApp （{
       * /
       次へ：{
         stage1：false 、
-        ステージ2：false 、
+        stage2：false 、
       } 、
     }
   } 、
