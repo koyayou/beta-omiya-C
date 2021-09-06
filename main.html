@@ -42,6 +42,17 @@
               <figure class="image__container">
                 <img src="assets/images/stage.png" alt="">
               </figure>
+               <div class="column">
+
+                  <figure class="image__container">
+                    <img src="assets/images/stage.png" alt="">
+                  </figure>
+
+                  <answer-input v-bind:correct="correctAnswer['stage2']['q2']" v-on:answer-input="answerInput($event, 'stage2', 2)"></answer-input>
+                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+                　
+                </div>
+
                 
  <!--  YouTube貼り付け
               <div class="youtube__container">
