@@ -14,20 +14,20 @@ const  app  =  Vue 。createApp （{
     戻り値 {
       / *解答
       * 元。QC2-3を配列しますはステージ2の配列に解応答をします。
-      * q3： 'おおお'、
+      * q3： 'すて3',
       * /
       correctAnswer：{
         stage1：{
-          q1：'サンダー' 、
-          q2:'ファイヤー'、
-          q3:'ワォーター'、
-        } 、
+          q1：'サンダー' 
+          q2:'ファイヤー'
+          q3:'ワォーター'
+        } 
         stage2：{
-          q1：'すて2' 、
-        } 、
+          q1：'オールデリート' 
+        } 
         stage3：{
-          q1：'すて3' 、
-        }　　、
+          q1：'すて3' 
+        }　　
       } 、
 
       / *ここの問題が正解かか
@@ -49,8 +49,8 @@ const  app  =  Vue 。createApp （{
 
       / *ステージの問題があり正解かか* /
       クリア：{
-        stage1：false 、
-        stage2：false 、
+        stage1：true 、
+        stage2：true 、
         stage3：false 、
       } 、
 
