@@ -103,8 +103,8 @@ app.component('answer-input', {
   data: function () {
     return {
       /* 送信ボタン上下に表示されるメッセージ */
-      okMessage: 'clear！',
-      ngMessage: 'error！',
+      okMessage: 'クリアー！',
+      ngMessage: 'エラー！',
       message: '',
       inputAnswer: '',
     }
