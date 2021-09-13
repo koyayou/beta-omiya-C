@@ -97,9 +97,6 @@
 	v-if="next['stage1']"はnext['stage2']がtrueになったら表示します。
 	----------------------------------------------------------------------->
 	<div v-if="next['stage1']" id="sectionStage2" class="stage">
-	
-	
-	<!-- STAGE2問題セクション　ここから -->
 	<section>
 	<section class="section">
 	<div class="container">
@@ -107,58 +104,64 @@
 	<p class="text-center">ステージ2まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。<br>
 	下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</p>
 	<p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
-	
-	<div class="container">
-	<figure class="image__container">
-	<img src="assets/images/stage.png" alt="">
-	</figure>
-	
-	
-	</div>
-	</div>
-	</section>
-	<!-- STAGE2問題セクション　ここまで -->
-	
-	<!-- STAGE2解答入力セクション　ここから -->
-	<section class="section bg-color--keycolor">
-	<div class="container">
-	<h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
-	<!------------------------------------------------------------------------------------------------------------
-	解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
-	v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
-	v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
-	2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
-	1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
-	[]、()の間違い、''の抜けがあると動きません。
-	------------------------------------------------------------------------------------------------------------>
-	<answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
-	
-	<a class="link-hint" href="hint1.html" target="hint2">ヒントをみる ></a>
-	</div>
-	</section>
-	<!-- STAGE2解答入力セクション　ここまで -->
-	
-	<!-- STAGE2クリア画面　ここから -->
-	<!------------------------------------------------------------------------------------------------------
-	ステージを全問正解するとclear['stage1']がtrusになります。
-	v-if="clear['stage1']"はclear['stage1']がtrueになったら表示します。
-	v-bind:class="{isClear:clear['stage1']}"はclear['stage1']がtrueになったら「isClear」クラスを追加します。
-	-------------------------------------------------------------------------------------------------------->
-	<section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
-	<div class="container">
-	<div class="clear-message">
-	<div class="clear-message__title">STAGE：2  クリア！</div>
-	<div class="clear-message__content">ステージ2家庭科室の扉が開いた！<br>
-	さぁ先生を助けるため<br>
-	３つステージの謎をとき、暗号を見つけ出そう！</div>
-	<button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
-	</div>
-	</div>
-	</section>
-	<!-- STAGE2クリア画面　ここまで -->
-	
-	</div>
-	<!-- STAGE2　ここまで -->
+	  </div>
+          </div>
+          <div class="stage-column__container section bg-color--keycolor">
+            <div class="container">
+              <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
+              <!-------------------------------------------------------------
+                class名"row"内のclass名"column"が横並びになります。
+                改行する場合は以下のように追加してください。
+                <div class="row">
+                  <div class="column">
+                    ～ 内容 ～
+                  </div>
+                </div>
+              ------------------------------------------------------------->
+              <div class="row">
+
+                <!-- STAGE2-1　ここから -->
+                <div class="column">
+                  <!-- STAGE2-1問題セクション　ここから -->
+                  <figure class="image__container">
+                    <img src="assets/images/nazo2.png" alt="">
+                  </figure>
+                  <!-- STAGE2-1問題セクション　ここまで -->
+                  <!-- STAGE2-1解答入力セクション　ここから -->
+                  <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
+                  <a class="link-hint" href="hint2.html" target="hint2">ヒントをみる ></a>
+                  <!-- STAGE2-1解答入力セクション　ここまで -->
+                </div><!-- /.column -->
+                <!-- STAGE2-1　ここまで -->
+
+              </div><!-- /.row -->
+
+            </div>
+          </div>
+        </section>
+
+        <!-- STAGE2クリア画面　ここから -->
+        <section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
+          <div class="container">
+            <div class="clear-message">
+              <div class="clear-message__title">STAGE：2　クリア！</div>
+              <div class="clear-message__content">「体操服」と「定規」を選んでクリア！<br>
+                「定規」は固くて細長い添え木に、<br>
+                「体操服」は止めるための布の代わりになった。<br>
+                折れた骨の両側の関節と定規を体操服で結び、固定した。<br>
+                よし！これで応急措置の方法がわかった！<br>
+                <br>
+                数分後…<br>
+                無事に治療も終わったようだ。<br>
+                ひまりちゃんも痛そうだがなんとか歩ける様子。<br>
+              手当てに想定外の時間がかかったので急いで脱出しよう！</div>
+                <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+            </div>
+          </div>
+        </section>
+        <!-- STAGE2クリア画面　ここまで -->
+      </div>
+      <!-- STAGE2　ここまで -->
 	
 	<!-- STAGE3　ここから -->
 	<div v-if="next['stage2']" id="sectionStage3" class="stage">
