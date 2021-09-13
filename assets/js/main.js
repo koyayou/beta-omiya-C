@@ -18,30 +18,36 @@ const app = Vue.createApp({
       */
       correctAnswer: {
         stage1: {
-          q1: 'ファイヤー',
-          q2: 'サンダー',
-          q3: 'ウォーター',
+          q1: 'あああ',
         },
         stage2: {
-          q1: 'オールデリート',
+          q1: 'いいい',
           // q2: 'えええ',
           // q3: 'おおお'
         },
         stage3: {
-          q1: '未定',
+          q1: 'ううう',
           // q2: 'かかか',
           // q3: 'ききき',
         }
       },
+        stage4: {
+          q1: 'えええ',
+          // q2: 'えええ',
+          // q3: 'おおお'
+        },
+        stage5: {
+          q1: 'おおお',
+          // q2: 'えええ',
+          // q3: 'おおお'
+        },
 
       /* それぞれの問題が正解かどうか
       *  ex. 問題2-3を追加する場合は配列にfalseを追加します。
       */
       answer: {
         stage1: [
-          false, //1-1
-          false, //1-2
-          false, //1-3
+          false,
         ],
         stage2: [
           false, // 2-1
@@ -53,6 +59,12 @@ const app = Vue.createApp({
           // false, // 3-2
           // false, // 3-3
         ]
+        stage4: [
+          false,
+        ],
+        stage5: [
+          false,
+        ],
       },
 
       /* ステージの問題が全て正解かどうか */
@@ -60,6 +72,8 @@ const app = Vue.createApp({
         stage1: false,
         stage2: false,
         stage3: false,
+        stage4: false, 
+        stage5: false,
       },
 
       /* 次のステージを表示するかどうか
@@ -68,6 +82,10 @@ const app = Vue.createApp({
       next: {
         stage1: false,
         stage2: false,
+        stage3: false,
+        stage4: false,
+        stage5: false,
+
       },
     }
   },
@@ -103,7 +121,7 @@ app.component('answer-input', {
   data: function () {
     return {
       /* 送信ボタン上下に表示されるメッセージ */
-      okMessage: 'クリアー！',
+      okMessage: 'クリア！',
       ngMessage: 'エラー！',
       message: '',
       inputAnswer: '',
