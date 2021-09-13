@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>封鎖された家庭科室からの脱出 │ Project N</title>
+  <title>閉ざされた魔法学校からの脱出 │ Project N</title>
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -23,7 +23,7 @@
   </header>
   <main class="main main-page">
     <!-- タイトルエリア　ここから -->
-    <h1 class="main-title"><img src="assets/images/main-image.png" alt="封鎖された家庭科室からの脱出"></h1>
+    <h1 class="main-title"><img src="assets/images/main-image.png" alt="閉ざされた魔法学校からの脱出"></h1>
     <!-- タイトルエリア　ここまで -->
     <div id="stage">
 
@@ -34,8 +34,8 @@
         <section class="section">
           <div class="container">
             <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>さぁゲームを始めよう！</h2>
-            <p class="text-center">まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。<br>
-              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</p>
+            <p class="text-center">さあ早速一つ目の魔法を習得しよう!<br>
+              下の画像の謎を解き、魔法の呪文をキーワード欄に入力しよう。</p>
             <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
   
             <div class="container">
@@ -78,10 +78,10 @@
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：１  クリア！</div>
-              <div class="clear-message__content">家庭科室の扉が開いた！<br>
-                さぁ先生を助けるため<br>
-                ３つステージの謎をとき、暗号を見つけ出そう！</div>
-              <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
+              <div class="clear-message__content">ファイヤーの魔法を習得した！<br>
+                魔物を倒すため<br>
+                さらに魔法を習得しよう！</div>
+              <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
         </section>
@@ -93,16 +93,16 @@
       <!-- STAGE2　ここから -->
       <!---------------------------------------------------------------------
         クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
-        v-if="next['stage1']"はnext['stage1']がtrueになったら表示します。
+        v-if="next['stage2']"はnext['stage1']がtrueになったら表示します。
       ----------------------------------------------------------------------->
       <div v-if="next['stage1']" id="sectionStage2" class="stage">
-        <sectionstage2>
+        <section>
           <div class="section">
             <div class="container">
-              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>黒板に書かれている謎を解け！</h2>
-              <p class="text-center">家庭科室に入ることができた！<br>
-                すぐに目に入ったのは黒板にある４つの謎。<br>
-                これらを解くことで、きっと次のステップに繋がるはずだ！</p>
+              <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>２つ目の魔法を習得しよう！</h2>
+              <p class="text-center">サンダーの魔法を覚えた！<br
+                魔物を倒すため。<br>
+                さらに魔法を習得しよう！</p>
             </div>
           </div>
           <div class="stage-column__container section bg-color--keycolor">
@@ -145,8 +145,8 @@
           <div class="container">
             <div class="clear-message">
               <div class="clear-message__title">STAGE：2　クリア！</div>
-              <div class="clear-message__content">黒板の指示に従い、<br>
-                次のステージの謎を解こう！</div>
+              <div class="clear-message__content">サンダーの魔法を覚えた<br>
+                魔物を倒すためさらに魔法を習得しよう！</div>
                 <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
             </div>
           </div>
@@ -159,7 +159,7 @@
       <div v-if="next['stage2']" id="sectionStage3" class="stage">
 
         <!-- STAGE3-1問題セクション　ここから -->
-        <section class="sectionStage3">
+        <section class="section">
           <div class="container">
             <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>家庭科室の課題とは</h2>
             <p class="text-center">黒板から得たメッセージは、「食物の廃棄問題」だった。<br>
@@ -201,13 +201,15 @@
       </div>
       <!-- STAGE3　ここまで -->
 
-     <!-- STAGE4　ここから -->
+     
+      
+       <!-- STAGE4　ここから -->
       <!---------------------------------------------------------------------
         クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
         v-if="next['stage4']"はnext['stage3']がtrueになったら表示します。
       ----------------------------------------------------------------------->
-      <div v-if="next['stage3']" id="sectionStage4" class="stage">
-       <sectionStage4>
+      <div v-if="next['stage4']" id="sectionStage3" class="stage">
+        <section>
           <div class="section">
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：4</span>黒板に書かれている謎を解け！</h2>
@@ -218,7 +220,7 @@
           </div>
           <div class="stage-column__container section bg-color--keycolor">
             <div class="container">
-              <h2 class="section-title"><span class="section-title__stage">STAGE：4</span>魔法の呪文を入力</h2>
+              <h2 class="section-title"><span class="section-title__stage">STAGE：4</span>キーワードを入力</h2>
               <!-------------------------------------------------------------
                 class名"row"内のclass名"column"が横並びになります。
                 改行する場合は以下のように追加してください。
