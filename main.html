@@ -1,357 +1,356 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>封鎖された家庭科室からの脱出 │ Project N</title>
-  <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <svg width="0" height="0" class="hidden">
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.47 24.94" id="arrow" class="arrow_svg">
-      <title>arrow</title>
-      <polygon points="0 24.94 0 19.66 7.35 12.47 0 5.92 0 0 12.47 12.47 0 24.94"/>
-    </symbol>
-  </svg>
-  <header class="header">
-    <div class="container">
-      <div class="header__logo"><img src="assets/images/logo.svg" alt="チームロゴ"></div>
-      <div class="header__name">N・S高生制作サイト</div>
-    </div>
-  </header>
-  <main class="main main-page">
-    <!-- タイトルエリア　ここから -->
-    <h1 class="main-title"><img src="assets/images/main-image.png" alt="封鎖された家庭科室からの脱出"></h1>
-    <!-- タイトルエリア　ここまで -->
-    <div id="stage">
+<！DOCTYPE html >
+< html  lang = " ja " >
+<頭>
+  < meta  charset = " UTF-8 " >
+  < meta  http-equiv = " X-UA-Compatible " content = " IE = edge " >
+  < meta  name = " viewport " content = " width = device-width、initial-scale = 1.0 " >
+  < title >封鎖固た家科室からの脱出│プロジェクトN </ title >
+  < link  rel = " stylesheet " href = " assets / css / normalize.css " >
+  < link  rel = " stylesheet " href = " assets / css / style.css " >
+</ヘッド>
+<本体>
+  < svg  width = " 0 " height = " 0 " class = " hidden " >
+    < symbol  xmlns = " http://www.w3.org/2000/svg " viewBox = " 0 0 12.47 24.94 " id = " arrow " class = " arrow_svg " >
+      <タイトル>矢印</タイトル>
+      <ポリゴン ポイント= " 0 24.94 0 19.66 7.35 12.47 0 5.92 0 0 12.47 12.47 0 24.94 " />
+    </記号>
+  </ svg >
+  <ヘッダー クラス= "ヘッダー" >
+    < div  class = "コンテナ" >
+      < divの クラス= " header__logo " > < IMG  SRC ="資産/画像/ logo.svg " ALT ="チームロゴ" > </ DIV >
+      < div  class = " header__name " > N・S高生生産サイト</ div >
+    </ div >
+  </ヘッダー>
+  <メイン クラス= "メインメインページ" >
+    <！-クリスマスエリアここから->
+    < h1  class = " main-title " > < img  src = " assets / images / main-image.png " alt = "封鎖された家科室からの脱出" > </ h1 >
+    <！-クリスマスエリアここから->
+    < div  id = "ステージ" >
 
-      <!-- STAGE1　ここから -->
-      <div id="sectionStage1" class="stage">
+      <！-STAGE1ここから->
+      < div  id = " sectionStage1 " class = " stage " >
 
-        <!-- STAGE1問題セクション　ここから -->
-        <section class="section">
-          <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>さぁゲームを始めよう！</h2>
-            <p class="text-center">まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。<br>
-              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</p>
-            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
+        <！-STAGE1問題改善ここから->
+        <セクション クラス= "セクション" >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title section-title--keycolorlight " > < span  class = " section-title__stage " > STAGE：1 </ span >さぁゲームを始めよう！</ h2 >
+            < p個の クラス= "テキスト中心" >まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。< BR >
+              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</ P >
+            < p個の クラス= "テキスト・センター" >困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</ P >
   
-            <div class="container">
-              <figure class="image__container">
-                <img src="assets/images/stage.png" alt="">
-              </figure>
+            < div  class = "コンテナ" >
+              < figure  class = " image__container " >
+                < img  src = " assets / images / stage.png " alt = "" >
+              </図>
                 
                 
-            </div>
-          </div>
-        </section>
-        <!-- STAGE1問題セクション　ここまで -->
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE1問題改善ここまで->
 
-        <!-- STAGE1解答入力セクション　ここから -->
-        <section class="section bg-color--keycolor">
-          <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：1</span>キーワードを入力</h2>
-            <!------------------------------------------------------------------------------------------------------------
-              解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
-              v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
-              v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
-              2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
-              1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
-              []、()の間違い、''の抜けがあると動きません。
-            ------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage1']['q1']" v-on:answer-input="answerInput($event, 'stage1', 1)"></answer-input>
+        <！-STAGE1解答入力ここから->
+        <セクション クラス= "セクションbg-color--keycolor " >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title " > < span  class = " section-title__stage " > STAGE：1 </ span >外をダウンロード</ h2 >
+            <！------------------------------------------------ -------------------------------------------------- ----------
+              解回答入力タブのバイナリです。
+              v-bind：correct = "correctAnswer ['stage1'] ['q1']"は正解の解応答をします。
+              v-on：answer-input = "answerInput（$ event、 'stage1'、1）"はアプリケーションオプションした時のピストンをする関数です。
+              2パラメータ、3パラメータ 'stage1'、1はstage1の1問目属性なります。
+              1番麺の最$ eventは正解、変数解の悪いを変数です。
+              []、（）のモザイク、 ''の乾守と主張ません。
+            -------------------------------------------------- -------------------------------------------------- -------->
+            < answer-input  v-bind：correct = " correctAnswer ['stage1'] ['q1'] " v-on：answer-input = " answerInput（$ event、 'stage1'、1） " > </ answer-input >>
 
-            <a class="link-hint" href="hint1.html" target="hint1">ヒントをみる ></a>
-          </div>
-        </section>
-        <!-- STAGE1解答入力セクション　ここまで -->
+            <クラス= "リンク-ヒント"のhref =" hint1.html "ターゲット=" hint1 " >ヒントをみる> </ A > 
+          </ div >
+        </セクション>
+        <！-STAGE1解答入力ここ度->
 
-        <!-- STAGE1クリア画面　ここから -->
-        <!------------------------------------------------------------------------------------------------------
-          ステージを全問正解するとclear['stage1']がtrusになります。
-          v-if="clear['stage1']"はclear['stage1']がtrueになったら表示します。
-          v-bind:class="{isClear:clear['stage1']}"はclear['stage1']がtrueになったら「isClear」クラスを追加します。
-        -------------------------------------------------------------------------------------------------------->
-        <section v-if="clear['stage1']" v-bind:class="{isClear:clear['stage1']}"  class="section section--clear bg-color--gray">
-          <div class="container">
-            <div class="clear-message">
-              <div class="clear-message__title">STAGE：１  クリア！</div>
-              <div class="clear-message__content">家庭科室の扉が開いた！<br>
-                さぁ先生を助けるため<br>
-                ３つステージの謎をとき、暗号を見つけ出そう！</div>
-              <button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
-            </div>
-          </div>
-        </section>
-        <!-- STAGE1クリア画面　ここまで -->
+        <！-STAGE1クリアラここから->
+        <！------------------------------------------------ -------------------------------------------------- --------
+          キャンペーンを全聴正解表クリア['stage1']がトラスになります。
+          v-if = "clear ['stage1']" haclear ['stage1']がtrueになったら表示します。
+          v-bind：class = "{isClear：clear ['stage1']}" haclear ['stage1']がtrueになったら「isClear」評価をしたします。
+        -------------------------------------------------- -------------------------------------------------- ---->
+        < section  v-if = " clear ['stage1'] " v-bind：class = " {isClear：clear ['stage1']} "   class = " section section--clear bg-color--gray " >
+          < div  class = "コンテナ" >
+            < div  class = " clear-message " >
+              <のdiv クラス= "クリアmessage__title " > STAGE：1クリア！</ DIV >
+              <のdiv クラス= "クリアmessage__content " >家庭科室の扉が開いた！< BR >
+                さぁ先生を助けるため、< BR >
+                ３つキャンペーンの暗号を引用、暗号を暗号出そう！</ div >
+              <ボタン Vオン：クリック= "ネクストステージ（ 'ステージ1'） " onclickの=" LOCATION.HREF = '＃sectionStage2' "クラス="クリアmessage__btn BTN " >次のステージへ< SVG クラス=" btn__arrow " > <使用 のxlink：hrefの= " #arrow " > </使用> </ SVG > </ボタン>
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE1クリアラここ\->
 
-      </div>
-      <!-- STAGE1　ここまで -->
+      </ div >
+      <！-STAGE1ここから->
 
-      <!-- STAGE2　ここから -->
-      <!---------------------------------------------------------------------
-        クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
-        v-if="next['stage1']"はnext['stage2']がtrueになったら表示します。
-      ----------------------------------------------------------------------->
-      <div v-if="next['stage1']" id="sectionStage2" class="stage">
-        <!-- STAGE1　ここから -->
-      <div id="sectionStage2" class="stage">
+      <！-STAGE2ここから->
+      <！------------------------------------------------ ---------------------
+        プリドラの「次のステージへ」ボタンへ表示します。
+        v-if = "next ['stage1']"はnext ['stage2']がtrueになったら表示します。
+      -------------------------------------------------- --------------------->
+      < div  v-if = " next ['stage1'] " id = " sectionStage2 " class = " stage " >
 
-        <!-- STAGE1問題セクション　ここから -->
-        <section class="section">
-          <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>さぁゲームを始めよう！</h2>
-            <p class="text-center">ステージ2まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。<br>
-              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</p>
-            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
+      < div  id = " sectionStage2 " class = " stage " >
+
+        <！-STAGE2問題改善ここから->
+        <セクション クラス= "セクション" >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title section-title--keycolorlight " > < span  class = " section-title__stage " > STAGE：2 </ span >さぁゲームを始めよう！</ h2 >
+            < p個の クラス= "テキスト・センター" >ステージ2まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。< BR >
+              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</ P >
+            < p個の クラス= "テキスト・センター" >困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</ P >
   
-            <div class="container">
-              <figure class="image__container">
-                <img src="assets/images/stage.png" alt="">
-              </figure>
+            < div  class = "コンテナ" >
+              < figure  class = " image__container " >
+                < img  src = " assets / images / stage.png " alt = "" >
+              </図>
                 
                 
-            </div>
-          </div>
-        </section>
-        <!-- STAGE2問題セクション　ここまで -->
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE2問題改善ここまで->
 
-        <!-- STAGE2解答入力セクション　ここから -->
-        <section class="section bg-color--keycolor">
-          <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：2</span>キーワードを入力</h2>
-            <!------------------------------------------------------------------------------------------------------------
-              解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
-              v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
-              v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
-              2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
-              1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
-              []、()の間違い、''の抜けがあると動きません。
-            ------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage2']['q1']" v-on:answer-input="answerInput($event, 'stage2', 1)"></answer-input>
+        <！-STAGE2解答入力ここから->
+        <セクション クラス= "セクションbg-color--keycolor " >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title " > < span  class = " section-title__stage " > STAGE：2 </ span >外をダウンロード</ h2 >
+            <！------------------------------------------------ -------------------------------------------------- ----------
+              解回答入力タブのバイナリです。
+              v-bind：correct = "correctAnswer ['stage1'] ['q1']"は正解の解応答をします。
+              v-on：answer-input = "answerInput（$ event、 'stage1'、1）"はアプリケーションオプションした時のピストンをする関数です。
+              2パラメータ、3パラメータ 'stage1'、1はstage1の1問目属性なります。
+              1番麺の最$ eventは正解、変数解の悪いを変数です。
+              []、（）のモザイク、 ''の乾守と主張ません。
+            -------------------------------------------------- -------------------------------------------------- -------->
+            < answer-input  v-bind：correct = " correctAnswer ['stage2'] ['q1'] " v-on：answer-input = " answerInput（$ event、 'stage2'、1） " > </ answer-input >>
 
-            <a class="link-hint" href="hint1.html" target="hint2">ヒントをみる ></a>
-          </div>
-        </section>
-        <!-- STAGE2解答入力セクション　ここまで -->
+            <クラス= "リンク-ヒント"のhref =" hint1.html "ターゲット=" hint2 " >ヒントをみる> </ A > 
+          </ div >
+        </セクション>
+        <！-STAGE2解答入力ここ度->
 
-        <!-- STAGE2クリア画面　ここから -->
-        <!------------------------------------------------------------------------------------------------------
-          ステージを全問正解するとclear['stage1']がtrusになります。
-          v-if="clear['stage1']"はclear['stage1']がtrueになったら表示します。
-          v-bind:class="{isClear:clear['stage1']}"はclear['stage1']がtrueになったら「isClear」クラスを追加します。
-        -------------------------------------------------------------------------------------------------------->
-        <section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
-          <div class="container">
-            <div class="clear-message">
-              <div class="clear-message__title">STAGE：2  クリア！</div>
-              <div class="clear-message__content">ステージ2家庭科室の扉が開いた！<br>
-                さぁ先生を助けるため<br>
-                ３つステージの謎をとき、暗号を見つけ出そう！</div>
-              <button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
-            </div>
-          </div>
-        </section>
-        <!-- STAGE2クリア画面　ここまで -->
+        <！-STAGE2クリアラここから->
+        <！------------------------------------------------ -------------------------------------------------- --------
+          キャンペーンを全聴正解表クリア['stage1']がトラスになります。
+          v-if = "clear ['stage1']" haclear ['stage1']がtrueになったら表示します。
+          v-bind：class = "{isClear：clear ['stage1']}" haclear ['stage1']がtrueになったら「isClear」評価をしたします。
+        -------------------------------------------------- -------------------------------------------------- ---->
+        < section  v-if = " clear ['stage2'] " v-bind：class = " {isClear：clear ['stage2']} "   class = " section section--clear bg-color--gray " >
+          < div  class = "コンテナ" >
+            < div  class = " clear-message " >
+              < div  class = " clear-message__title " > STAGE：2透明！</ div >
+              <のdiv クラス= "クリアmessage__content " >ステージ2家庭科室の扉が開いた！< BR >
+                さぁ先生を助けるため、< BR >
+                ３つキャンペーンの暗号を引用、暗号を暗号出そう！</ div >
+              <ボタン Vオン：クリック= "ネクストステージ（ 'STAGE2'） " onclickの=" LOCATION.HREF = '＃sectionStage3' "クラス="クリアmessage__btn BTN " >次のステージへ< SVG クラス=" btn__arrow " > <使用 のxlink：hrefの= " #arrow " > </使用> </ SVG > </ボタン>
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE2クリアラここ\->
 
-      </div>
-      <!-- STAGE2　ここまで -->
+      </ div >
+      <！-STAGE2ここから->
 
-      <!-- STAGE3　ここから -->
-      <div v-if="next['stage2']" id="sectionStage3" class="stage">
+      <！-STAGE3ここから->
+      < div  v-if = " next ['stage2'] " id = " sectionStage3 " class = " stage " >
 
-        <!-- STAGE3　ここから -->
-      <div id="sectionStage3" class="stage">
+      < div  id = " sectionStage3 " class = " stage " >
 
-        <!-- STAGE1問題セクション　ここから -->
-        <section class="section">
-          <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>さぁゲームを始めよう！</h2>
-            <p class="text-center">ステージ3まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。<br>
-              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</p>
-            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
+        <！-STAGE3問題改善ここから->
+        <セクション クラス= "セクション" >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title section-title--keycolorlight " > < span  class = " section-title__stage " > STAGE：3 </ span >さぁゲームを始めよう！</ h2 >
+            < p個の クラス= "テキスト・センター" >ステージ3まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。< BR >
+              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</ P >
+            < p個の クラス= "テキスト・センター" >困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</ P >
   
-            <div class="container">
-              <figure class="image__container">
-                <img src="assets/images/stage.png" alt="">
-              </figure>
+            < div  class = "コンテナ" >
+              < figure  class = " image__container " >
+                < img  src = " assets / images / stage.png " alt = "" >
+              </図>
                 
                 
-            </div>
-          </div>
-        </section>
-        <!-- STAGE3問題セクション　ここまで -->
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE3問題是ここ室->
 
-        <!-- STAGE3解答入力セクション　ここから -->
-        <section class="section bg-color--keycolor">
-          <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：3</span>キーワードを入力</h2>
-            <!------------------------------------------------------------------------------------------------------------
-              解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
-              v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
-              v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
-              2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
-              1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
-              []、()の間違い、''の抜けがあると動きません。
-            ------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage3']['q1']" v-on:answer-input="answerInput($event, 'stage3', 1)"></answer-input>
+        <！-STAGE3解答入力ここから->
+        <セクション クラス= "セクションbg-color--keycolor " >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title " > < span  class = " section-title__stage " > STAGE：3 </ span >外をダウンロード</ h2 >
+            <！------------------------------------------------ -------------------------------------------------- ----------
+              解回答入力タブのバイナリです。
+              v-bind：correct = "correctAnswer ['stage1'] ['q1']"は正解の解応答をします。
+              v-on：answer-input = "answerInput（$ event、 'stage1'、1）"はアプリケーションオプションした時のピストンをする関数です。
+              2パラメータ、3パラメータ 'stage1'、1はstage1の1問目属性なります。
+              1番麺の最$ eventは正解、変数解の悪いを変数です。
+              []、（）のモザイク、 ''の乾守と主張ません。
+            -------------------------------------------------- -------------------------------------------------- -------->
+            < answer-input  v-bind：correct = " correctAnswer ['stage3'] ['q1'] " v-on：answer-input = " answerInput（$ event、 'stage3'、1） " > </ answer-input >>
 
-            <a class="link-hint" href="hint1.html" target="hint3">ヒントをみる ></a>
-          </div>
-        </section>
-        <!-- STAGE1解答入力セクション　ここまで -->
+            <クラス= "リンク-ヒント"のhref =" hint1.html "ターゲット=" hint3 " >ヒントをみる> </ A > 
+          </ div >
+        </セクション>
+        <！-STAGE3解答入力ここ度->
 
-        <!-- STAGE1クリア画面　ここから -->
-        <!------------------------------------------------------------------------------------------------------
-          ステージを全問正解するとclear['stage1']がtrusになります。
-          v-if="clear['stage1']"はclear['stage1']がtrueになったら表示します。
-          v-bind:class="{isClear:clear['stage1']}"はclear['stage1']がtrueになったら「isClear」クラスを追加します。
-        -------------------------------------------------------------------------------------------------------->
-        <section v-if="clear['stage3']" v-bind:class="{isClear:clear['stage3']}"  class="section section--clear bg-color--gray">
-          <div class="container">
-            <div class="clear-message">
-              <div class="clear-message__title">STAGE：3  クリア！</div>
-              <div class="clear-message__content">家庭科室の扉が開いた！<br>
-                さぁ先生を助けるため<br>
-                ３つステージの謎をとき、暗号を見つけ出そう！</div>
-              <button v-on:click="nextStage('stage3')" onclick="location.href='#sectionStage4'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
-            </div>
-          </div>
-        </section>
-        <!-- STAGE1クリア画面　ここまで -->
+        <！-STAGE3クリアラここから->
+        <！------------------------------------------------ -------------------------------------------------- --------
+          キャンペーンを全聴正解表クリア['stage1']がトラスになります。
+          v-if = "clear ['stage1']" haclear ['stage1']がtrueになったら表示します。
+          v-bind：class = "{isClear：clear ['stage1']}" haclear ['stage1']がtrueになったら「isClear」評価をしたします。
+        -------------------------------------------------- -------------------------------------------------- ---->
+        < section  v-if = " clear ['stage3'] " v-bind：class = " {isClear：clear ['stage3']} "   class = " section section--clear bg-color--gray " >
+          < div  class = "コンテナ" >
+            < div  class = " clear-message " >
+              < div  class = " clear-message__title " > STAGE：3透明！</ div >
+              <のdiv クラス= "クリアmessage__content " >家庭科室の扉が開いた！< BR >
+                さぁ先生を助けるため、< BR >
+                ３つキャンペーンの暗号を引用、暗号を暗号出そう！</ div >
+              <ボタン Vオン：クリック= "ネクストステージ（ 'ステージ3'） " onclickの=" LOCATION.HREF = '＃sectionStage4' "クラス="クリアmessage__btn BTN " >次のステージへ< SVG クラス=" btn__arrow " > <使用 のxlink：hrefの= " #arrow " > </使用> </ SVG > </ボタン>
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE3クリアラここ\->
 
-      </div>
-      <!-- STAGE1　ここまで -->
+      </ div >
+      <！-STAGE3ここから->
 
-     <!-- STAGE4　ここから -->
-      <!---------------------------------------------------------------------
-        クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
-        v-if="next['stage4']"はnext['stage3']がtrueになったら表示します。
-      ----------------------------------------------------------------------->
-      <div v-if="next['stage3']" id="sectionStage4" class="stage">
-      <!-- STAGE4　ここから -->
-      <div id="sectionStage4" class="stage">
+     <！-STAGE4ここから->
+      <！------------------------------------------------ ---------------------
+        プリドラの「次のステージへ」ボタンへ表示します。
+        v-if = "next ['stage4']"はnext ['stage3']がtrueになったら表示します。
+      -------------------------------------------------- --------------------->
+      < div  v-if = " next [' stage3 '] " id = " sectionStage4 " class = " stage " >
 
-        <!-- STAGE1問題セクション　ここから -->
-        <section class="section">
-          <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>さぁゲームを始めよう！</h2>
-            <p class="text-center">ステージ4まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。<br>
-              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</p>
-            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
+      < div  id = " sectionStage4 " class = " stage " >
+
+        <！-STAGE4問題改善ここから->
+        <セクション クラス= "セクション" >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title section-title--keycolorlight " > < span  class = " section-title__stage " > STAGE：1 </ span >さぁゲームを始めよう！</ h2 >
+            < p個の クラス= "テキスト・センター" >ステージ4まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。< BR >
+              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</ P >
+            < p個の クラス= "テキスト・センター" >困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</ P >
   
-            <div class="container">
-              <figure class="image__container">
-                <img src="assets/images/stage.png" alt="">
-              </figure>
+            < div  class = "コンテナ" >
+              < figure  class = " image__container " >
+                < img  src = " assets / images / stage.png " alt = "" >
+              </図>
                 
                 
-            </div>
-          </div>
-        </section>
-        <!-- STAGE4問題セクション　ここまで -->
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE4問題改善ここまで->
 
-        <!-- STAGE4解答入力セクション　ここから -->
-        <section class="section bg-color--keycolor">
-          <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：4</span>キーワードを入力</h2>
-            <!------------------------------------------------------------------------------------------------------------
-              解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
-              v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
-              v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
-              2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
-              1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
-              []、()の間違い、''の抜けがあると動きません。
-            ------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage4']['q1']" v-on:answer-input="answerInput($event, 'stage4', 1)"></answer-input>
+        <！-STAGE4解答入力ここから->
+        <セクション クラス= "セクションbg-color--keycolor " >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title " > < span  class = " section-title__stage " > STAGE：4 </ span >外をダウンロード</ h2 >
+            <！------------------------------------------------ -------------------------------------------------- ----------
+              解回答入力タブのバイナリです。
+              v-bind：correct = "correctAnswer ['stage1'] ['q1']"は正解の解応答をします。
+              v-on：answer-input = "answerInput（$ event、 'stage1'、1）"はアプリケーションオプションした時のピストンをする関数です。
+              2パラメータ、3パラメータ 'stage1'、1はstage1の1問目属性なります。
+              1番麺の最$ eventは正解、変数解の悪いを変数です。
+              []、（）のモザイク、 ''の乾守と主張ません。
+            -------------------------------------------------- -------------------------------------------------- -------->
+            < answer-input  v-bind：correct = " correctAnswer ['stage4'] ['q1'] " v-on：answer-input = " answerInput（$ event、 'stage4'、1） " > </ answer-input >>
 
-            <a class="link-hint" href="hint1.html" target="hint1">ヒントをみる ></a>
-          </div>
-        </section>
-        <!-- STAGE4解答入力セクション　ここまで -->
+            <クラス= "リンク-ヒント"のhref =" hint1.html "ターゲット=" hint1 " >ヒントをみる> </ A > 
+          </ div >
+        </セクション>
+        <！-STAGE4解答入力ここ度->
 
-        <!-- STAGE4クリア画面　ここから -->
-        <!------------------------------------------------------------------------------------------------------
-          ステージを全問正解するとclear['stage1']がtrusになります。
-          v-if="clear['stage1']"はclear['stage1']がtrueになったら表示します。
-          v-bind:class="{isClear:clear['stage1']}"はclear['stage1']がtrueになったら「isClear」クラスを追加します。
-        -------------------------------------------------------------------------------------------------------->
-        <section v-if="clear['stage4']" v-bind:class="{isClear:clear['stage4']}"  class="section section--clear bg-color--gray">
-          <div class="container">
-            <div class="clear-message">
-              <div class="clear-message__title">STAGE：4  クリア！</div>
-              <div class="clear-message__content">家庭科室の扉が開いた！<br>
-                さぁ先生を助けるため<br>
-                ３つステージの謎をとき、暗号を見つけ出そう！</div>
-              <button v-on:click="nextStage('stage4')" onclick="location.href='#sectionStage5'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
-            </div>
-          </div>
-        </section>
-        <!-- STAGE4クリア画面　ここまで -->
+        <！-STAGE4クリアラここから->
+        <！------------------------------------------------ -------------------------------------------------- --------
+          キャンペーンを全聴正解表クリア['stage1']がトラスになります。
+          v-if = "clear ['stage1']" haclear ['stage1']がtrueになったら表示します。
+          v-bind：class = "{isClear：clear ['stage1']}" haclear ['stage1']がtrueになったら「isClear」評価をしたします。
+        -------------------------------------------------- -------------------------------------------------- ---->
+        < section  v-if = " clear ['stage4'] " v-bind：class = " {isClear：clear ['stage4']} "   class = " section section--clear bg-color--gray " >
+          < div  class = "コンテナ" >
+            < div  class = " clear-message " >
+              < div  class = " clear-message__title " > STAGE：4透明！</ div >
+              <のdiv クラス= "クリアmessage__content " >家庭科室の扉が開いた！< BR >
+                さぁ先生を助けるため、< BR >
+                ３つキャンペーンの暗号を引用、暗号を暗号出そう！</ div >
+              <ボタン Vオン：クリック= "ネクストステージ（ 'STAGE4'） " onclickの=" LOCATION.HREF = '＃sectionStage5' "クラス="クリアmessage__btn BTN " >次のステージへ< SVG クラス=" btn__arrow " > <使用 のxlink：hrefの= " #arrow " > </使用> </ SVG > </ボタン>
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE4クリアラここ\->
 
-      </div>
-      <!-- STAGE4　ここまで -->
+      </ div >
+      <！-STAGE4ここから->
         
-        <!-- STAGE5　ここから -->
-      <div v-if="next['stage4']" id="sectionStage5" class="stage">
+        <！-STAGE5ここから->
+      < div  v-if = " next ['stage4'] " id = " sectionStage5 " class = " stage " >
 
-     <div id="sectionStage5" class="stage">
+     < div  id = " sectionStage5 " class = " stage " >
 
-        <!-- STAGE5問題セクション　ここから -->
-        <section class="section">
-          <div class="container">
-            <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：5</span>さぁゲームを始めよう！</h2>
-            <p class="text-center">ステージ5まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。<br>
-              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</p>
-            <p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
+        <！-STAGE5問題改善ここから->
+        <セクション クラス= "セクション" >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title section-title--keycolorlight " > < span  class = " section-title__stage " > STAGE：5 </ span >さぁゲームを始めよう！</ h2 >
+            < p個の クラス= "テキスト・センター" >ステージ5まずは、この学校の家庭科室の鍵のありかを知らなければ入ることができない。< BR >
+              下の画像の謎を解き、鍵のありかをキーワード欄に入力しよう。</ P >
+            < p個の クラス= "テキスト・センター" >困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</ P >
   
-            <div class="container">
-              <figure class="image__container">
-                <img src="assets/images/stage.png" alt="">
-              </figure>
+            < div  class = "コンテナ" >
+              < figure  class = " image__container " >
+                < img  src = " assets / images / stage.png " alt = "" >
+              </図>
                 
                 
-            </div>
-          </div>
-        </section>
-        <!-- STAGE5問題セクション　ここまで -->
+            </ div >
+          </ div >
+        </セクション>
+        <！-STAGE5問題改善ここまで->
 
-        <!-- STAGE5解答入力セクション　ここから -->
-        <section class="section bg-color--keycolor">
-          <div class="container">
-            <h2 class="section-title"><span class="section-title__stage">STAGE：5</span>キーワードを入力</h2>
-            <!------------------------------------------------------------------------------------------------------------
-              解答入力欄のコンポーネントです。入力欄・送信ボタン・エラーメッセージを表示します。
-              v-bind:correct="correctAnswer['stage1']['q1']" は正解の解答を指します。
-              v-on:answer-input="answerInput($event, 'stage1', 1)" は送信ボタンをクリックした時の動作を決める関数です。
-              2番目、3番目の1引数 'stage1', 1 はstage1の1問目ということになります。
-              1番麺の引数 $event は正解、不正解の判定を受け取る変数です。
-              []、()の間違い、''の抜けがあると動きません。
-            ------------------------------------------------------------------------------------------------------------>
-            <answer-input v-bind:correct="correctAnswer['stage5']['q1']" v-on:answer-input="answerInput($event, 'stage5', 1, 'final')"></answer-input>
+        <！-STAGE5解答入力ここから->
+        <セクション クラス= "セクションbg-color--keycolor " >
+          < div  class = "コンテナ" >
+            < h2  class = " section-title " > < span  class = " section-title__stage " > STAGE：5 </ span >外をダウンロード</ h2 >
+            <！------------------------------------------------ -------------------------------------------------- ----------
+              解回答入力タブのバイナリです。
+              v-bind：correct = "correctAnswer ['stage1'] ['q1']"は正解の解応答をします。
+              v-on：answer-input = "answerInput（$ event、 'stage1'、1）"はアプリケーションオプションした時のピストンをする関数です。
+              2パラメータ、3パラメータ 'stage1'、1はstage1の1問目属性なります。
+              1番麺の最$ eventは正解、変数解の悪いを変数です。
+              []、（）のモザイク、 ''の乾守と主張ません。
+            -------------------------------------------------- -------------------------------------------------- -------->
+            < answer-input  v-bind：correct = " correctAnswer ['stage5'] ['q1'] " v-on：answer-input = " answerInput（$ event、 'stage5'、1、 'final'） " > < /回答-入力>
 
-            <a class="link-hint" href="hint5.html" target="hint5">ヒントをみる ></a>
-          </div>
-        </section>
-        <!-- STAGE5解答入力セクション　ここまで -->
+            <クラス= "リンク-ヒント"のhref =" hint5.html "ターゲット=" hint5 " >ヒントをみる> </ A > 
+          </ div >
+        </セクション>
+        <！-STAGE5解答入力ここ度->
 
        
-      </div>
-      <!-- STAGE5　ここまで -->
+      </ div >
+      <！-STAGE5ここから->
      
 
-    </div>
-  </main>
-  <footer class="footer section bg-color--gray">
-    <div class="container">
-        <p class="text-center">授業主催： N・S高<br>協力：株式会社SCRAP<br>企画制作：N・S高生</p>
-        <p class="text-center">「リアル脱出ゲーム」は株式会社SCRAPの登録商標です。</p>
-        <p class="text-center">株式会社SCRAPとN・S高で実施した授業「リアル脱出ゲームの作り方」の一環で<br>生徒が制作したものであり、SCRAPが主催/公認するものではありません。</p>
-    </div>
-  </footer>
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+    </ div >
+  </メイン>
+  <フッター クラス= "フッターセクションbg-color--gray " >
+    < div  class = "コンテナ" >
+        < p個の クラス= "テキスト中心" >授業主催：N・S高< BR >協力：株式会社スクラップ< BR >企画制作：N・S高生</ P >
+        < p  class = " text-center " >「リアル脱出ゲーム」は、SCRAPの登録商標です。</ p >
+        < p個の クラス= "テキスト中心" >株式会社スクラップとN・S高で実施した授業「リアル脱出ゲームの作り方」の一環で< BR >生徒が制作したものであり、スクラップが主催/公認するものありません。</ P >
+    </ div >
+  </フッター>
+  < script  src = " https://unpkg.com/vue@next " > </ script >
+  < script  src = " assets / js / main.js " > </スクリプト>
+</本文>
+</ html >
