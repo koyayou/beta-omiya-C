@@ -93,7 +93,7 @@
       <!-- STAGE2　ここから -->
       <!---------------------------------------------------------------------
         クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
-        v-if="next['stage1']"はnext['stage1']がtrueになったら表示します。
+        v-if="next['stage1']"はnext['stage2']がtrueになったら表示します。
       ----------------------------------------------------------------------->
       <div v-if="next['stage1']" id="sectionStage2" class="stage">
         <sectionstage2>
@@ -156,7 +156,7 @@
       <!-- STAGE2　ここまで -->
 
       <!-- STAGE3　ここから -->
-      <div v-if="next['stage3']" id="sectionStage2" class="stage">
+      <div v-if="next['stage2']" id="sectionStage3" class="stage">
 
         <!-- STAGE3-1問題セクション　ここから -->
          <sectionstage3>
@@ -264,8 +264,8 @@
         クリア画面の「次のステージへ」ボタンをクリックしたら表示します。
         v-if="next['stage5']"はnext['stage4']がtrueになったら表示します。
       ----------------------------------------------------------------------->
-      <div v-if="next['stage5']" id="sectionStage4" class="stage">
-        <section>
+      <div v-if="next['stage4']" id="sectionStage4" class="stage">
+        <sectionstage5>
           <div class="section">
             <div class="container">
               <h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：5</span>黒板に書かれている謎を解け！</h2>
