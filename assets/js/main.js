@@ -101,7 +101,6 @@ const app = Vue.createApp({
     },
   }
 })
-​
 /* 解答入力欄のコンポーネント */
 app.component('answer-input', {
   props: ['correct'],
@@ -135,5 +134,4 @@ app.component('answer-input', {
     },
   }
 })
-​
 app.mount('#stage')
