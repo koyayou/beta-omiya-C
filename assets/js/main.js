@@ -10,12 +10,7 @@
  *********************************************************************************************************/
 const app = Vue.createApp({
   data() {
-    /* 初期値を設定します */
     return {
-      /* 解答
-      *  ex. 問題2-3を追加する場合はstage2の配列に解答を追加します。
-      *    q3: 'おおお',
-      */
       correctAnswer: {
         stage1: {
           q1: 'あああ',
@@ -40,10 +35,7 @@ const app = Vue.createApp({
           // q2: 'えええ',
           // q3: 'おおお'
         },
-
-      /* それぞれの問題が正解かどうか
-      *  ex. 問題2-3を追加する場合は配列にfalseを追加します。
-      */
+      },
       answer: {
         stage1: [
           false,
@@ -65,7 +57,6 @@ const app = Vue.createApp({
           false,
         ],
       },
-
       /* ステージの問題が全て正解かどうか */
       clear: {
         stage1: false,
@@ -74,7 +65,6 @@ const app = Vue.createApp({
         stage4: false, 
         stage5: false,
       },
-
       /* 次のステージを表示するかどうか
       *  最終ステージはページを遷移するので設定不要です。
       */
@@ -83,7 +73,6 @@ const app = Vue.createApp({
         stage2: false,
         stage3: false,
         stage4: false,
-
       },
     }
   },
@@ -112,7 +101,7 @@ const app = Vue.createApp({
     },
   }
 })
-
+​
 /* 解答入力欄のコンポーネント */
 app.component('answer-input', {
   props: ['correct'],
@@ -146,5 +135,5 @@ app.component('answer-input', {
     },
   }
 })
-
+​
 app.mount('#stage')
