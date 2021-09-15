@@ -34,8 +34,8 @@
 	<!-- STAGE1問題セクション　ここから -->
 	<section class="section">
 	<div class="container">
-	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：1</span>さぁゲームを始めよう！</h2>
-	<p class="text-center">まずは基本の魔法を習得しよう。<br>
+	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">ステージ1</span>さぁゲームを始めよう！</h2>
+	<p class="text-center">まずは何とでも組み合わせられる基本の魔法を習得しよう。<br>
 	下の画像の謎を解き、魔法の呪文をキーワード欄に入力しよう</p>
 	<p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
 	
@@ -78,9 +78,9 @@
 	<section v-if="clear['stage1']" v-bind:class="{isClear:clear['stage1']}"  class="section section--clear bg-color--gray">
 	<div class="container">
 	<div class="clear-message">
-	<div class="clear-message__title">STAGE：１  クリア！</div>
-	<div class="clear-message__content">ファイヤーの魔法を習得した！<br>
-	さあ次の魔法を習得しよう<br>
+	<div class="clear-message__title">ステージ1  クリア！</div>
+	<div class="clear-message__content">ファイヤーの魔法を習得し、<br>
+		火を起こせるようになった<br>
 	</div>
 	<button v-on:click="nextStage('stage1')" onclick="location.href='#sectionStage2'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
 	</div>
@@ -102,7 +102,8 @@
 	<!-- STAGE2問題セクション　ここから -->
 	<section class="section">
 	<div class="container">
-	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：2</span>2つ目の魔法を習得しよう。</h2>
+	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">ステージ2</span>ファイヤーだけでは頼りない。<br>
+		さらに魔法を習得しよう</h2>
 	<p class="text-center"><br>
 	下の画像の謎を解き、魔法の呪文をキーワード欄に入力しよう。</p>
 	<p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
@@ -146,9 +147,9 @@
 	<section v-if="clear['stage2']" v-bind:class="{isClear:clear['stage2']}"  class="section section--clear bg-color--gray">
 	<div class="container">
 	<div class="clear-message">
-	<div class="clear-message__title">STAGE：2  クリア！</div>
-	<div class="clear-message__content">サンダーの魔法を習得した!！<br>
-	さあ次の魔法を習得しよう<br>
+	<div class="clear-message__title">ステージ2  クリア！</div>
+	<div class="clear-message__content">ウォーターの魔法を習得し、<br>
+	水を生成できるようになった。<br>
 	</div>
 	<button v-on:click="nextStage('stage2')" onclick="location.href='#sectionStage3'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
 	</div>
@@ -166,7 +167,8 @@
 	<!-- STAGE3問題セクション　ここから -->
 	<section class="section">
 	<div class="container">
-	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：3</span>3つ目の魔法を習得しよう！</h2>
+	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">ステージ3</span>魔法は合わせると強くなる。<br>
+		ファイヤーの魔法とウォーターの魔法を合わせてみよう。</h2>
 	<p class="text-center"><br>
 	下の画像の謎を解き、魔法の呪文をキーワード欄に入力しよう。</p>
 	<p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
@@ -210,10 +212,11 @@
 	<section v-if="clear['stage3']" v-bind:class="{isClear:clear['stage3']}"  class="section section--clear bg-color--gray">
 	<div class="container">
 	<div class="clear-message">
-	<div class="clear-message__title">STAGE：3  クリア！</div>
-	<div class="clear-message__content">ウォーターの魔法を習得した！<br>
-	3つの魔法を習得した僕ら。<br>
-	これなら敵を倒すことができる。取得した魔法で敵を倒しに行こう！</div>
+	<div class="clear-message__title">ステージ：3  クリア！</div>
+	<div class="clear-message__content">水が火によって一瞬で蒸発することにより起きる爆発<br>
+		スチームエクスプロージョン（水蒸気爆発）を習得した。<br>
+	スチームエクスプロージョンを習得した僕ら。<br>
+	これなら魔物を倒すことができる。習得した魔法で敵を倒しに行こう！</div>
 	<button v-on:click="nextStage('stage3')" onclick="location.href='#sectionStage4'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
 	</div>
 	</div>
@@ -234,10 +237,9 @@
 	<!-- STAGE4問題セクション　ここから -->
 	<section class="section">
 	<div class="container">
-	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：4</span>敵を探そう！</h2>
-	<p class="text-center">教室に閉じ込められている僕らは遠く離れた場所にいる敵に攻撃を始めた。<br>
-    でも敵がどこにいるのかわからない。<br>
-	そこで遠くにいる敵を見つける魔法を使って敵のいる場所を探がそう</p>
+	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">ステージ4</span>敵を探そう！</h2>
+	<p class="text-center">でも敵がどこにいるのかわからない。<br>
+		そこで遠くにいる敵を見つける魔法アイテムで敵のいる場所を探そう！</p>
 	<p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
 	
 	<div class="container">
@@ -279,8 +281,8 @@
 	<section v-if="clear['stage4']" v-bind:class="{isClear:clear['stage4']}"  class="section section--clear bg-color--gray">
 	<div class="container">
 	<div class="clear-message">
-	<div class="clear-message__title">STAGE：4  クリア！</div>
-	<div class="clear-message__content">敵が見つかった！<br>
+	<div class="clear-message__title">ステージ4  クリア！</div>
+	<div class="clear-message__content">敵はここ100年程使われていない校長室にいた！<br>
 	みんなで攻撃を始めたが敵は一切倒れる気配がない。<br>
 	このままでは教室から出ることができない。どうしよう</div>
 	<button v-on:click="nextStage('stage4')" onclick="location.href='#sectionStage5'" class="clear-message__btn btn">次のステージへ<svg class="btn__arrow"><use xlink:href="#arrow"></use></svg></button>
@@ -299,11 +301,10 @@
 	<!-- STAGE5問題セクション　ここから -->
 	<section class="section">
 	<div class="container">
-	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">STAGE：5</span>敵を倒そう！</h2>
-	<p class="text-center">そんな時教室にある一冊の本が目に入った。<br>
-	「魔法を組み合わせる？」<br>
-    3つの魔法を組み合わせたらもっと強い魔法になって敵を倒すことができるかもしれない。<br>
-    3つの魔法を組み合わせて敵を倒そう！</p>
+	<h2 class="section-title section-title--keycolorlight"><span class="section-title__stage">ステージ5</span>敵を倒そう！</h2>
+	<p class="text-center">その時校長室にある100年分の大量のほこりが目に入った。<br>
+	ファイヤーとほこりを合わせることでもっと強い爆発を起こせるかもしれない。<br>
+    　　　　　　　　さらに強い爆発を起こして魔物を倒そう！</p>
 	<p class="text-center">困ったときは、ヒントがある。なるべく見ないようにゲームを進めていこう。</p>
 	
 	<div class="container">
