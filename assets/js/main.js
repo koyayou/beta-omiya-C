@@ -107,8 +107,8 @@ app.component('answer-input', {
   data: function () {
     return {
       /* 送信ボタン上下に表示されるメッセージ */
-      okMessage: 'クリア！',
-      ngMessage: 'エラー！',
+      okMessage: '正解！',
+      ngMessage: 'その答えは違うみたいだ',
       message: '',
       inputAnswer: '',
     }
