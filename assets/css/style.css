@@ -284,7 +284,7 @@ button {
 }
 
 .section-title--keycolorlight {
-  background-color: #ffff00;
+  background-color: #a7a4a4;
 }
 
 .section-title--keycolorlight .section-title__stage {
@@ -365,7 +365,7 @@ button {
 * header
 *****************/
 .header {
-  background-color: #fff;
+  background-color: #241010;
   height: 60px;
 }
 
@@ -442,7 +442,7 @@ button {
 
 .err-message {
   color: #c1272d;
-  font-size: 18px;
+  font-size: 27px;
   text-align: center;
 }
 
@@ -453,7 +453,7 @@ button {
 }
 
 .clear-message {
-  background-color: #d9e021;
+  background-color: #4a3b3f;
   padding: 30px 30px 60px;
   position: relative;
 }
