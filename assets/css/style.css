@@ -175,7 +175,7 @@ button {
   content: '';
   width: calc(100% - 60px);
   height: 7px;
-  background-color: #fcee21;
+  background-color: #797979;
   position: absolute;
   top: -10px;
   left: 30px;
@@ -198,7 +198,7 @@ button {
           transform: rotate(90deg);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  fill: #009245;
+  fill: #5c3e26;
   width: 12px;
   height: 24px;
 }
@@ -239,11 +239,11 @@ button {
 * Color
 *********************/
 .bg-color--keycolor {
-  background-color: #ffba66;
+  background-color: #422500;
 }
 
 .bg-color--subcolor {
-  background-color: #d9e021;
+  background-color: #8a1333;
 }
 
 .bg-color--gray {
@@ -284,7 +284,7 @@ button {
 }
 
 .section-title--keycolorlight {
-  background-color: #d9e021;
+  background-color: #C5956B;
 }
 
 .section-title--keycolorlight .section-title__stage {
